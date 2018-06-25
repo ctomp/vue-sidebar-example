@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <Sidebar></Sidebar>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="main-content">
+      <div id="nav">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link>
+      </div>
+      <router-view/>
     </div>
-    <router-view/>
   </div>
 </template>
 
@@ -30,6 +32,14 @@ export default {
   width: 100%;
   height: 100%;
   position: relative;
+}
+#main-content {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
 }
 #nav {
   padding: 30px;
